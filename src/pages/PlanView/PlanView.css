@@ -1,0 +1,40 @@
+.view-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: flexbox;
+  
+  }
+  
+.view {
+      width: 300px;
+      height: 180px;
+      border-radius: 15px;
+      background-color: #6ec1e4;
+      margin: 10px;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+    }
+  
+p{
+      color: white;
+      font-size: 1em;
+      margin-bottom: 0;
+      margin: 1px;
+    }
+span{
+      font-weight: bold;
+    }
+.container-link{
+  margin-top: 20px;
+}
+    .new-link{
+      margin-bottom: 0px;
+      margin-top: 70px;
+      padding: 5px;
+    }
+.new-link:hover{
+      color: #192939
+    }

@@ -1,0 +1,10 @@
+#root {
+  max-width: 1280px; 
+  min-width: 400px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: inherit;
+  height: 100%;
+
+}
