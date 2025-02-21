@@ -19,10 +19,11 @@ function PlanView(){
     return(
         <div className="view-container">
             <div className="view">
-                <p>Producto: <span>{plan.product}</span></p>
-                <p>Fecha de Inicio <span>{plan.date}</span></p>
-                <p>Estado: <span>{plan.status}</span></p>
-                <p>Suscriptor: <span> {plan.subscriber}</span></p>
+                <p>Nombre: <span>{plan.firstName}</span></p>
+                <p>Apellido de Inicio <span>{plan.lastName}</span></p>
+                <p>Nacionalidad: <span>{plan.nationality}</span></p>
+                <p>Código de Cliente: <span> {plan.customerCode}</span></p>
+                <p>Destino: <span> {plan.destination[0]}</span></p>
             </div>
             
             <button> Descargar</button>

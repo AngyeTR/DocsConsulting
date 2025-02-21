@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useDataStore } from "./Store/dataStore";
 import Layout from './pages/Layout';
 import HomePage from './pages/HomePage/HomePage';
@@ -13,7 +13,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={ <HomePage /> } />
-        <Route path="/view" element={ plan ? <PlanView/> : <HomePage /> } />
+        <Route path="/view"  element={ plan ? <PlanView/> : <Navigate replace to="/" /> } />
       </Routes>   
     </Layout>
   )

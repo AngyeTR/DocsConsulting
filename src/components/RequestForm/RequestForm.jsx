@@ -12,9 +12,6 @@ function RequestForm(){
     const plan = useDataStore(state => state.plan)
     const updateModalStatus = useDataStore( state => state.updateModalStatus);
     const setPlan = useDataStore(state => state.setPlan)
-    
-     console.log(plan)
-
 
   const handleSubmit = async (e)=> {
     e.preventDefault();

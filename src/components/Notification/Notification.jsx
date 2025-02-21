@@ -25,11 +25,11 @@ function Notification(){
                     <p className="notification-text">Loading</p>
                 </>
             )  }
-        else if(plan.error){
+        else if(plan.error || plan.message){
             return(
                 <>
                     <FaRegCircleXmark className="sucessIcon"/>
-                    <p className="notification-text">Algo salió mal, por favor intente de nuevo</p>
+                    <p className="notification-text">{plan.message ? plan.message : "Algo salió mal, por favor intente de nuevo"}</p>
                     <button onClick={handleClick}>Cerrar</button>
                 </>  
                 )
