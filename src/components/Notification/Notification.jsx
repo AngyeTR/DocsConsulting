@@ -19,6 +19,7 @@ function Notification(){
 
     function render(){
         if(!plan){
+            console.log("loading")
             return(
                 <>
                     <VscLoading className="loadingIcon"/>
@@ -26,6 +27,8 @@ function Notification(){
                 </>
             )  }
         else if(plan.error || plan.message){
+            console.log("erroring")
+
             return(
                 <>
                     <FaRegCircleXmark className="sucessIcon"/>
@@ -35,6 +38,8 @@ function Notification(){
                 )
         }  
         else {
+            console.log("Exito")
+
             updateModalStatus(false);
             navigate("/view")
             return(<></>  ) }     

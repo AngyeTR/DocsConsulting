@@ -17,6 +17,7 @@ function RequestForm(){
     e.preventDefault();
     updateModalStatus(true)
     const result = await requestPlan(name, lastName, code)
+    console.log("plan?", result)
     setPlan(result);
   }
    
