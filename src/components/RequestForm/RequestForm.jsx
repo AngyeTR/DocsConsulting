@@ -1,15 +1,12 @@
-import { useDataStore } from '../../Store/dataStore';
 import { useState } from 'react';
+import { useDataStore } from '../../Store/dataStore';
 import { requestPlan } from '../../utils/requestPlan';
 import "./RequestForm.css"
-
 
 function RequestForm(){
     const [name, setName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [code, setCode] = useState(null);
-
-    const plan = useDataStore(state => state.plan)
     const updateModalStatus = useDataStore( state => state.updateModalStatus);
     const setPlan = useDataStore(state => state.setPlan)
 
@@ -21,10 +18,8 @@ function RequestForm(){
     setPlan(result);
   }
    
-  
   return (
     <div className="form-container"  >
-        
       <h1 className="form-title">¡Bienvenido a tu gestión de Asistencia Funeraria!</h1>
       <h2 className="form-subtitle">Accede a tu programa de beneficios</h2>
       <form className="form" >

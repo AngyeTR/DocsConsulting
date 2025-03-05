@@ -5,7 +5,7 @@
     align-items:start;
     margin: auto;
     display: flex;
-   
+    margin: 0 10px;
 }
 .exbtn{
     height: 20px;

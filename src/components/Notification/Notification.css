@@ -16,14 +16,18 @@
   .notification-container{
     display: block;
     justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 10% 0 2%;
   }
 
 .notification-text{
-    font-weight: bold;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    font-size: 1.5rem;
-    color: #192939
+  text-align: center;
+  font-weight: bold;
+  margin: 2% 10% 5% 10%;
+  font-size: 1.5rem;
+  color: #192939
   }
 
   @keyframes loading {

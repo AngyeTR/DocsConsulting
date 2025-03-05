@@ -1,14 +1,14 @@
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import { VscLoading } from "react-icons/vsc";
-
-import "./Notification.css"
 import { useDataStore } from "../../Store/dataStore";
+import "./Notification.css"
+import image from "../../assets/logo-mini.png"
 
 function Notification(){
     const plan = useDataStore(state => state.plan)
     const updateModalStatus = useDataStore( state => state.updateModalStatus);
     const setPlan = useDataStore( state => state.setPlan)
+   
     
     const navigate = useNavigate();
 
@@ -22,17 +22,16 @@ function Notification(){
             console.log("loading")
             return(
                 <>
-                    <VscLoading className="loadingIcon"/>
+                    <img src={image} className="loadingIcon"/> 
                     <p className="notification-text">Loading</p>
                 </>
             )  }
         else if(plan.error || plan.message){
-            console.log("erroring")
-
+            const message = plan.status == 404 ? "Usuario no encontrado" : plan.message == "Network Error" ? "Error de red" : "Algo salió mal, por favor intente de nuevo"
             return(
                 <>
                     <FaRegCircleXmark className="sucessIcon"/>
-                    <p className="notification-text">{plan.message ? plan.message : "Algo salió mal, por favor intente de nuevo"}</p>
+                    <p className="notification-text">{message}</p>
                     <button onClick={handleClick}>Cerrar</button>
                 </>  
                 )

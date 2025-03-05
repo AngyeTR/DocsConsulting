@@ -1,14 +1,14 @@
 .form-container{
     margin: auto;
     margin-top: 20px;
-    width: 100%; 
+    width: 80%; 
     max-width: 440px;
-    min-width: 380px;
+    min-width: 360px;
     justify-content: center;
     justify-items: center;
     align-items:center;
     background-color: #6ec1e4;
-    padding: 20px;
+    padding: 20px; 
     border-radius: 15px;
     color: white;
     }

@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <HomePage /> } />
         <Route path="/view"  element={ plan ? <PlanView/> : <Navigate replace to="/" /> } />
+        {/* <Route path="/view"  element={<PlanView/>  }/> */}
       </Routes>   
     </Layout>
   )
